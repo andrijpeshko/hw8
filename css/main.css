@@ -265,6 +265,19 @@ body {
 .gallery-title {
   margin: 0px;
   margin-bottom: 50px;
+  width: 100%;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .gallery-title {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery-title {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .gallery {
@@ -474,6 +487,18 @@ body {
   gap: 30px;
   padding: 0px;
   margin: 0;
+  flex-wrap: wrap;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .clients-list {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients-list {
+    width: calc((100% - 90px) / 6);
+  }
 }
 
 .client-item {
