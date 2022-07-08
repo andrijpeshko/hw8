@@ -218,6 +218,8 @@ body {
   padding: 0;
   margin: 0px;
   justify-content: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
 }
 
 .about__title {
@@ -266,11 +268,22 @@ body {
 }
 
 .gallery {
-  display: flex;
+  display: none;
   gap: 30px;
   justify-content: center;
   margin: 0px;
   padding: 0px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .gallery {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery {
+    display: flex;
+  }
 }
 
 .gallery-section {
@@ -293,7 +306,7 @@ body {
   background-color: rgba(47, 48, 58, 0.8);
   padding: 0;
   height: 70px;
-  width: 370px;
+  width: 100%;
   margin: 0px;
   font-family: "Roboto";
   font-style: normal;
@@ -1046,12 +1059,12 @@ body {
 }
 @media screen and (min-width: 480px) {
   .container {
-    width: 480px;
+    max-width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
