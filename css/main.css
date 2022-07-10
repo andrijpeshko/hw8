@@ -165,6 +165,11 @@ body {
   background-color: #2F303A;
   padding-bottom: 210px;
 }
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1200px;
+  }
+}
 
 .hero__title {
   display: flex;
@@ -488,21 +493,21 @@ body {
   padding: 0px;
   margin: 0;
   flex-wrap: wrap;
+}
+.clients-list .client-item {
+  display: block;
   width: 100%;
+  width: calc((100% - 30px) / 2);
 }
 @media screen and (min-width: 768px) {
-  .clients-list {
-    width: calc((100% - 30px) / 2);
+  .clients-list .client-item {
+    width: calc((100% - 60px) / 3);
   }
 }
 @media screen and (min-width: 1200px) {
-  .clients-list {
-    width: calc((100% - 90px) / 6);
+  .clients-list .client-item {
+    width: calc((100% - 150px) / 6);
   }
-}
-
-.client-item {
-  display: block;
 }
 
 .clients-link {
@@ -512,6 +517,7 @@ body {
 
 .cliens-img {
   fill: currentColor;
+  margin: 0 auto;
 }
 
 .clients-link:hover, .clients-link:focus {

@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     padding-top: 200px;
-    background-image: url(../img/hero-img.jpg) ;
+    background-image: url(../img/hero-phone.jpg) ;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -12,6 +12,14 @@
     margin: 0 auto;
     background-color: #2F303A;
     padding-bottom: 210px;
+    @media screen and (min-width: 768px) {
+            background-image:url(../img/hero-tablet.jpg);
+    
+        }
+    
+        @media screen and (min-width:1200px) {
+        background-image: url(../img/hero-desktop.jpg);
+        }
     
 
 
