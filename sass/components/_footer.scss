@@ -9,13 +9,16 @@
     letter-spacing: 0.03em;
 
     color: #FFFFFF;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 8px;
 }
 
 .footer {
     background: #2F303A;
     padding-top: 60px;
     padding-bottom: 60px;
-    width: 1200;
+    
 
 
 }
@@ -77,9 +80,15 @@
     width: 206px;
     height: 80px;
     flex-wrap: wrap;
-    margin-left: 70px;
+    
     color: #FFFFFF;
     padding-top: 12px;
+
+
+    margin-left: 165px;
+    @media screen and (min-width: 768px) {
+
+    }
 }
 
 .title-social-footer {
@@ -95,6 +104,8 @@
 
     margin-bottom: 20px;
     margin-top: 0px;
+    margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 .social-footer {
@@ -179,6 +190,9 @@ fill: #FFFFFF;
     padding-left: 29px;
     padding-right: 0;
     border: transparent;
+    
+
+    margin-top: 20px;
 }
 
 .input-footer {
@@ -244,5 +258,17 @@ fill: #FFFFFF;
 }
 
 .sub-footer {
-    margin-left: 93PX;
+    
+   
+    margin-top: 60px;
+    text-align: center;
+    
+}
+.footer-form-wrap{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.footer-info{
+    text-align: center;
 }

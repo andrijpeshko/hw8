@@ -128,11 +128,33 @@
 
 
     margin: 0px auto;
-    width: 1200px;
+    width: 100%;
+    @media screen and (min-width: 768px) {
+            max-width: 100%;
+            
+    
+        }
+    
+        @media screen and (min-width:1200px) {
+            max-width: 1200px;
+            padding-left: 15px;
+                padding-right: 15px;
+        }
+    
 
 
 }
-
+.nav-header{
+    display: none;
+    @media screen and (min-width: 768px) {
+            display: flex;
+    
+        }
+    
+        @media screen and (min-width:1200px) {
+            display: flex;
+        }
+}
 
 
 .icon {
@@ -145,7 +167,35 @@
 .header {
     padding-top: 25px;
     padding-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 80px;
+    box-sizing: border-box;
 }
+.mobile-menu{
+    background-color: transparent;
+    border: none;
+    display: flex;
+    transition-property: background-color fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (min-width: 768px) {
+            display: none;
+    
+        }
+    
+        @media screen and (min-width:1200px) {
+            display: none;
+        }
+                
+                }
+                                .mobile-menu
+                                {
+&:hover, &:focus {
+        fill: #2196F3;
+    }
+                                }
 
 .nav-list {
     display: flex;
@@ -157,12 +207,33 @@
 }
 
 .contact-list {
-    display: flex;
+    display: none;
     text-align: center;
     gap: 50px;
     margin: 0px;
     padding-left: 0px;
     align-items: center;
+    width: 100%;
+    
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-left: 84px;
+            font-weight: 500;
+                font-size: 12px;
+                line-height: 14px;
+                
+            
+                letter-spacing: 0.02em;
+            
+    
+        }
+    
+        @media screen and (min-width:1200px) {
+           display: flex;
+           gap: 30px;
+        }
 
 }
 

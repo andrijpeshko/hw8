@@ -110,7 +110,33 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0px auto;
-  width: 1200px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .wrap-header {
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .wrap-header {
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.nav-header {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .nav-header {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav-header {
+    display: flex;
+  }
 }
 
 .icon {
@@ -122,6 +148,34 @@ body {
 .header {
   padding-top: 25px;
   padding-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 80px;
+  box-sizing: border-box;
+}
+
+.mobile-menu {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  transition-property: background-color fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+.mobile-menu:hover, .mobile-menu:focus {
+  fill: #2196F3;
 }
 
 .nav-list {
@@ -133,12 +187,31 @@ body {
 }
 
 .contact-list {
-  display: flex;
+  display: none;
   text-align: center;
   gap: 50px;
   margin: 0px;
   padding-left: 0px;
   align-items: center;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-left: 84px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.02em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact-list {
+    display: flex;
+    gap: 30px;
+  }
 }
 
 .contacts-container {
@@ -164,11 +237,6 @@ body {
   margin: 0 auto;
   background-color: #2F303A;
   padding-bottom: 210px;
-}
-@media screen and (min-width: 1200px) {
-  .hero {
-    max-width: 1200px;
-  }
 }
 
 .hero__title {
@@ -582,13 +650,15 @@ body {
   font-style: normal;
   letter-spacing: 0.03em;
   color: #FFFFFF;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 8px;
 }
 
 .footer {
   background: #2F303A;
   padding-top: 60px;
   padding-bottom: 60px;
-  width: 1200;
 }
 
 .logo-footer {
@@ -633,11 +703,10 @@ body {
   width: 206px;
   height: 80px;
   flex-wrap: wrap;
-  margin-left: 70px;
   color: #FFFFFF;
   padding-top: 12px;
+  margin-left: 165px;
 }
-
 .title-social-footer {
   font-family: "Roboto";
   font-style: normal;
@@ -647,6 +716,8 @@ body {
   letter-spacing: 0.03em;
   margin-bottom: 20px;
   margin-top: 0px;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .social-footer {
@@ -712,6 +783,7 @@ body {
   padding-left: 29px;
   padding-right: 0;
   border: transparent;
+  margin-top: 20px;
 }
 
 .input-footer {
@@ -770,7 +842,18 @@ body {
 }
 
 .sub-footer {
-  margin-left: 93PX;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.footer-form-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-info {
+  text-align: center;
 }
 
 .backdrop {
@@ -1109,4 +1192,137 @@ img {
   width: 100%;
   max-width: 100%;
   height: auto;
+}
+
+.mob-menu {
+  position: fixed;
+  background-color: #fff;
+  top: 20px;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  transition-property: background-color color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob-menu ul {
+  list-style: none;
+}
+.mob-menu a {
+  font-style: normal;
+  text-decoration: none;
+}
+.mob-menu .container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+.mob-close-btn {
+  position: absolute;
+  top: 21px;
+  right: 25px;
+}
+
+.mob-navigation {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #212121;
+  transition-property: background-color color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob-navigation:hover {
+  color: #2196F3;
+}
+.mob-navigation:focus {
+  color: #2196F3;
+}
+
+.mob-nav-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-contact-tel {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.1764705882;
+  letter-spacing: 0.02em;
+  color: #2196F3;
+}
+
+.mob-contact-list {
+  margin: 0;
+  margin-bottom: 64px;
+}
+
+.mob-contact-mail {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+.social-mob-item::after {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
+  content: "";
+  margin-left: 10px;
+}
+.social-mob-item:last-child::after {
+  display: none;
+}
+
+.social-mob-header {
+  display: flex;
+  gap: 10px;
+  margin: 0;
+}
+
+.social-mob-link {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2222222222;
+  letter-spacing: 0.02em;
+  color: #2196F3;
+}
+
+.mob-nav-list {
+  margin: 0;
+}
+
+.mob-contact-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-close-btn {
+  background-color: transparent;
+  border: none;
+  transition-property: background-color fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob-close-btn:hover {
+  fill: #2196F3;
+}
+.mob-close-btn:focus {
+  fill: #2196F3;
 }/*# sourceMappingURL=main.css.map */
