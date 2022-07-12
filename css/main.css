@@ -688,7 +688,7 @@ body {
 }
 
 .footer-wrap {
-  display: flex;
+  display: block;
 }
 
 .social-footer {
@@ -707,6 +707,13 @@ body {
   padding-top: 12px;
   margin-left: 165px;
 }
+@media screen and (min-width: 768px) {
+  .social-footer-container {
+    width: 386px;
+    margin: 0;
+  }
+}
+
 .title-social-footer {
   font-family: "Roboto";
   font-style: normal;
@@ -783,7 +790,6 @@ body {
   padding-left: 29px;
   padding-right: 0;
   border: transparent;
-  margin-top: 20px;
 }
 
 .input-footer {
@@ -797,6 +803,28 @@ body {
 .footer-form-wrap {
   display: flex;
   align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .footer-form-wrap {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-form-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .logo-address-wrap {
+    max-width: 232px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo-address-wrap {
+    max-width: 1200px;
+  }
 }
 
 .input-footer::placeholder {

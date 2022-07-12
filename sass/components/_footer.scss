@@ -62,7 +62,7 @@
 
 .footer-wrap {
 
-    display: flex;
+    display: block;
 
 }
 
@@ -87,7 +87,8 @@
 
     margin-left: 165px;
     @media screen and (min-width: 768px) {
-
+width: 386px;
+margin: 0;
     }
 }
 
@@ -192,7 +193,7 @@ fill: #FFFFFF;
     border: transparent;
     
 
-    margin-top: 20px;
+    
 }
 
 .input-footer {
@@ -206,8 +207,26 @@ fill: #FFFFFF;
 .footer-form-wrap {
     display: flex;
     align-items: center;
+    @media screen and (min-width: 768px) {
+            display: flex;
+    
+        }
+    
+        @media screen and (min-width:1200px) {
+            display: flex;
+            flex-wrap: nowrap;
+        }
 }
-
+.logo-address-wrap{
+    @media screen and (min-width: 768px) {
+            max-width: 232px;
+    
+        }
+    
+        @media screen and (min-width:1200px) {
+            max-width: 1200px;
+        }
+}
 .input-footer
 {
     &::placeholder {
