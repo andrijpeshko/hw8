@@ -808,21 +808,6 @@ body {
   flex-direction: column;
 }
 
-@media screen and (min-width: 768px) {
-  .footer-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 50%;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .footer-wrap {
-    display: flex;
-    flex-wrap: nowrap;
-  }
-}
-
 .logo-address-wrap {
   text-align: center;
   margin: 0 auto;
@@ -1197,7 +1182,7 @@ body {
   margin: 0px auto;
   width: 100%;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 480px) {
   .container {
     max-width: 480px;
   }
