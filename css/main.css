@@ -807,13 +807,17 @@ body {
   flex-wrap: wrap;
   flex-direction: column;
 }
+
 @media screen and (min-width: 768px) {
-  .footer-form-wrap {
+  .footer-wrap {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50%;
   }
 }
 @media screen and (min-width: 1200px) {
-  .footer-form-wrap {
+  .footer-wrap {
     display: flex;
     flex-wrap: nowrap;
   }
@@ -823,17 +827,10 @@ body {
   text-align: center;
   margin: 0 auto;
 }
-@media screen and (min-width: 768px) {
-  .logo-address-wrap {
-    max-width: 232px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .logo-address-wrap {
-    max-width: 1200px;
-  }
-}
 
+.input-footer {
+  min-width: 450px;
+}
 .input-footer::placeholder {
   font-family: "Roboto";
   font-style: normal;

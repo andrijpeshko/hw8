@@ -212,30 +212,32 @@ fill: #FFFFFF;
         justify-content: center;
         flex-wrap: wrap;
         flex-direction: column;
+    
+}
+.footer-wrap{
     @media screen and (min-width: 768px) {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 50%;
     
         }
     
         @media screen and (min-width:1200px) {
             display: flex;
             flex-wrap: nowrap;
+            width: calc(25% + 30);
         }
 }
 .logo-address-wrap{
    text-align: center;
    margin: 0 auto;
-    @media screen and (min-width: 768px) {
-            max-width: 232px;
     
-        }
-    
-        @media screen and (min-width:1200px) {
-            max-width: 1200px;
-        }
 }
 .input-footer
+
 {
+    min-width: 450px;
     &::placeholder {
     font-family: 'Roboto';
     font-style: normal;
